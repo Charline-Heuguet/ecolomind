@@ -19,7 +19,7 @@
 
   
 // Inclusion of a security file. We had the path wrong the first time
-include plugin_dir_path(__FILE__) . 'src/security/init.php';
+//include plugin_dir_path(__FILE__) . 'src/security/init.php';
 
 
 

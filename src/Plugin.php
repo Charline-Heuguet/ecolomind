@@ -266,12 +266,12 @@ function getProfilTips(){
 
 
     function profilDelete(){
-    register_rest_route('wp/v2/ecolomind', 'profildelete', [
-        'methods' => 'POST',
-        'callback' => array($this,'deleteUser'),
-        'permission_callback' => function () {
-            return true;
-        }
+        register_rest_route('wp/v2/ecolomind', 'profildelete', [
+            'methods' => 'POST',
+            'callback' => array($this,'deleteUser'),
+            'permission_callback' => function () {
+                return true;
+            }
     ]);
 }
 
@@ -281,7 +281,7 @@ function getProfilTips(){
        
 //Suppression de ses recettes mises en favoris car les foreigns keys avec la table user bloque la suppression du user dans la table wp_users
 
-        $deleteUser = $request->get_json_params(); 
+        $deleteUser = $request->get_json_params();
         global $wpdb;
         $favorites = 'favorites';
         $deleteUser= [
@@ -309,7 +309,6 @@ function getProfilTips(){
     }
 
 
-//--------------------------------------------------
 
 //Endpoint favorites
 
